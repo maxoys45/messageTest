@@ -39,11 +39,11 @@ class NotesController extends Controller
 
 	}
 
-	public function showNote() {
+	public function showNote($id) {
 
-		// echo Note::all();
+		$note = Note::find($id);
 
-		return view('note');
+		return view('note')->with('note', $note);
 
 	}
 }

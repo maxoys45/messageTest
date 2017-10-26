@@ -10,11 +10,11 @@
 
 		<div class="note__content">
 			
-			<h4 class="note__author">Max</h4>
+			<h4 class="note__author">{{ $note->name }}</h4>
 
-			<div class="note__date">Today at 12:00</div>
+			<div class="note__date">{{ $note->date }}</div>
 
-			<div class="note__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos fugit tempore qui rerum neque, fuga. Voluptatum consequatur nemo animi. Sit consectetur aperiam nemo hic perspiciatis sunt, veniam odio illo. Velit!</div>
+			<div class="note__copy">{{ $note->note }}</div>
 
 		</div>
 
