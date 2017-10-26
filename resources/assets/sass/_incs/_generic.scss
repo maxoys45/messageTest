@@ -36,7 +36,7 @@ input, button, select, textarea, optgroup, option {
 
 h1, h2, h3, h4 {
 	line-height : $lineHeight--default;
-	color:$copy_dark;
+	color:$copy;
 }
 
 h1 {
@@ -84,7 +84,7 @@ p {
 }
 
 .anchor {
-	font-size:$fontSize--default;
+	font-size:$fontSize--small;
 	line-height :$lineHeight--default;
 	color:$link;
 	outline:none;
@@ -109,15 +109,18 @@ strong {
 	display : none;
 }
 
+.required {
+	color:$error;
+}
+
 .input--default {
 	@include inline-block;
-	cursor          : default;
 	border          : 1px solid lighten($dark, 70%);
 	background      : $white;
-	padding         : 1.5rem 1rem;
-	font-size       : $fontSize--default;
+	padding         : 1rem;
+	font-size       : $fontSize--small;
 	outline         : none;
-	color           : $dark;
+	color           : $copy;
 	text-align      : left;
 	position        : relative;
 	min-width       : 150px;
@@ -135,7 +138,7 @@ strong {
 
 .btn--default {
 	@include inline-block;
-	@include transition(border-color, .2s);
+	@include transition(all, .2s);
 	@include icomoon(icon-arrow-right) {
 		font-size: 1.3rem;
     	margin-left: .7rem;
@@ -143,6 +146,7 @@ strong {
 	@extend .stripInput;
 	letter-spacing:1px;
 	color:$white;
+	line-height:1;
 	font-weight:$font--bold;
 	font-size:$fontSize--default;
 	text-transform:uppercase;
@@ -152,6 +156,22 @@ strong {
 
 	&:hover, &:focus, &:active {
 		border-color: darken($primary, 20%);
+		background-color: saturate($primary, 10%);
+	}
+}
+
+.btn--secondary {
+	@include inline-block;
+	@include transition(all, .2s);
+	color:$copy;
+	line-height:1;
+	font-size:$fontSize--small;
+	padding:1.2rem 1.4rem;
+	font-weight:$font--med;
+	border:2px solid $copy;
+
+	&:hover, &:focus, &:active {
+		background-color:$white;
 	}
 }
 
@@ -184,4 +204,12 @@ iframe {
 		display: table;
 		clear: both;
 	}
+}
+
+.float--left {
+	float: left;
+}
+
+.float--right {
+	float: right;
 }

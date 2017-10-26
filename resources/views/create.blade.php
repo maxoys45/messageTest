@@ -6,34 +6,31 @@
 
 	@include('incs.messages')
 
-	{!! Form::open(['url' => 'create/submit']) !!}
-    
-		<ul class="form__group">
+	<form method="POST" action="create/submit">
+    {{ csrf_field() }}
 
-			<li class="form__item">
+		<div class="form__group">
 
-				{{Form::label('title', 'Title:', ['class' => 'form__label'])}}
-				{{Form::text('title', '', ['class' => 'form__input'])}}
+			<label class="form__label" for="title">Title: <span class="required">*</span></label>
+        	<input class="form__input" id="title" type="text" name="title" autofocus>
 
-			</li>
+		</div>
 
-			<li class="form__item">
+		<div class="form__group">
 
-				{{Form::label('note', 'Note:', ['class' => 'form__label'])}}
-				{{Form::textarea('note', '', ['class' => 'form__input'])}}
+			<label class="form__label" for="note">Note: <span class="required">*</span></label>
+        	<textarea class="form__textarea" id="note" cols="50" rows="10" name="note"></textarea>
 
-			</li>
+		</div>
 
-			<li class="form__item">
+		<div class="form__group btn__group">
 
-				<a href="/home" class="form__cancel float-left">Cancel</a>
+			<a href="/home" class="form__cancel float--left">Cancel</a>
 
-				{{Form::submit('Add note', ['class' => 'form__submit float-right'])}}
+			<input class="form__submit float--right" type="submit" value="Add note">
 
-			</li>
+		</div>
 
-		</ul>
-
-	{!! Form::close() !!}
+	</form>
 
 @endsection

@@ -1,30 +1,28 @@
 /* MAIN STYLES */
 
 html {
-	// height:100%;
+
 }
 
 body {
 	font-family:$font--default;
-	// height:100%;
 	line-height:1;
 	color:$copy;
 	background:$light;
 }
 
+// ALL CONTENT
+
 .allContent {
 	height:100%;
 	padding:3rem;
-	max-width: 960px;
-//	margin-left:auto;
-//	margin-right:auto;
+	max-width: 76.8rem;
 
 	@include bp($scr--medium) {
-//		padding:20px;
+
 	}
 
 	.inside {
-		// height:100%;
 		position:relative;
 	}
 }
@@ -42,4 +40,155 @@ body {
 	&:last-of-type {
 		margin-bottom:0;
 	}
+}
+
+.form__label {
+	font-weight:$font--med;
+	display:block;
+	margin-bottom:.5rem;
+	font-size:1.4rem;
+}
+
+.form__input, .form__textarea {
+	@extend .input--default;
+	width:100%;
+}
+
+.form__textarea {
+	resize:none;
+}
+
+.form__submit {
+	@extend .btn--default;
+}
+
+.form__cancel {
+	@extend .btn--secondary;
+}
+
+.alert {
+	padding:1rem;
+	font-size:1.2rem;
+	margin-bottom:1rem;
+	border-radius:.4rem;
+
+	&.success {
+		background:rgba($primary, 0.3);
+	}
+
+	&.error {
+		background:rgba($error, 0.3);
+	}
+	
+}
+
+// LOGIN 
+
+.login__container {
+	max-width:48rem;
+}
+
+// HOME
+
+.notes__container {
+	background-color:$white;
+	padding:1rem;
+	box-shadow:0 .1rem .2rem rgba($black, 0.2);
+	border-radius:$radius;
+}
+
+.notes__table {
+	margin-bottom:2rem;
+}
+
+.row {
+	@include flexbox-container();
+	border-bottom:1px solid darken($white, 10%);
+}
+
+.col {
+	@include flexbox-item();
+	padding:1rem;
+	font-weight:$font--med;
+	font-size:1.2rem;
+
+	&:nth-child(1) {
+		width:20%;
+	}
+
+	&:nth-child(2) {
+		width:60%;
+	}
+
+	&:nth-child(3) {
+		width:20%;
+	}
+
+
+}
+
+.row__heading {
+	background-color:darken($white, 10%);
+}
+
+.note__link {
+
+	&:hover, &:focus, &:active {
+		background-color:$copy;
+
+		.notes__cell {
+			color:$white;
+		}
+	}
+}
+
+// CREATE
+
+.btn__group {
+	overflow:auto;
+}
+
+// NOTE
+
+.note__container {
+	@include flexbox-container($alignItems:start);
+	margin-bottom:2rem;
+}
+
+.note__thumb {
+	@include flexbox-item($shrink:0);
+	border-radius:10rem;
+	overflow:hidden;
+	width:6rem;
+	height:6rem;
+	margin-right:2rem;
+
+}
+
+.note__content {
+	@include flexbox-item($grow:1);
+	@extend .notes__container;
+}
+
+.note__data {
+	overflow:auto;
+}
+
+.note__author {
+	float:left;
+	font-size:1.2rem;
+	font-weight:$font--med;
+}
+
+.note__date {
+	font-weight:$font--med;
+	float:right;
+	font-size:1.2rem;
+}
+
+.note__copy {
+	margin-top:1rem;
+	font-size:$fontSize--small;
+	line-height:$lineHeight--default;
+	clear:both;
 }

@@ -8,25 +8,25 @@
 
     <div class="notes__container">
 
-        <table class="notes__table">
+        <div class="notes__table">
 
-            <tr>
-                <th class="notes__heading">Created by</th>
-                <th class="notes__heading">Title</th>
-                <th class="notes__heading">Date</th>
-            </tr>
+            <div class="row row__heading">
+                <div class="col">Created by</div>
+                <div class="col">Title</div>
+                <div class="col">Date</div>
+            </div>
 
             @if(count($notes) > 0)
                 @foreach($notes as $note)
-                    <tr>
-                        <td class="notes__cell">{{$note->name}}</td>
-                        <td class="notes__cell"><a href="/note">{{$note->title}}</a></td>
-                        <td class="notes__cell">{{ date('d/m/y \a\t H:i', strtotime($note->created_at)) }}</td>
-                    </tr>
+                    <a class="row note__link" href="/note/{{ $note->id }}">
+                        <div class="col notes__cell">{{$note->name}}</div>
+                        <div class="col notes__cell">{{$note->title}}</div>
+                        <div class="col notes__cell">{{ date('d/m/y \a\t H:i', strtotime($note->created_at)) }}</div>
+                    </a>
                 @endforeach
             @endif
 
-        </table>
+        </div>
 
         <a href="/create-a-new-note" class="btn--default">Create a new note</a>
 

@@ -25,7 +25,9 @@ Route::group(['middleware' => ['auth']], function () {
 
 	Route::post('/create/submit', 'NotesController@submit');
 
-	Route::get('/note', 'NotesController@showNote');
+	// Route::get('/note', 'NotesController@showNote');
+
+	Route::get('/note/{id}', 'NotesController@showNote');
 	
 	// Route::get('/note/{id}', 'NotesController@showNote');
 
