@@ -1,0 +1,570 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);@font-face {
+  font-family: 'icomoon';
+  src: url(/fonts/icomoon.eot?c9c26658bdb7ff9b91db5b447f549cf8);
+  src: url(/fonts/icomoon.eot?c9c26658bdb7ff9b91db5b447f549cf8#iefix) format("embedded-opentype"), url(/fonts/icomoon.ttf?fcc74bd9f9b675c073edfe64f37c5ae0) format("truetype"), url(/fonts/icomoon.woff?990d7152aa65273976ae0289813d6d2d) format("woff"), url(/fonts/icomoon.svg?9b06ac53ae38848317574067851f0a63#icomoon) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-arrow-right,
+.btn--default:after {
+  content: "\E900";
+}
+
+/* @keyframes duration | timing-function | delay |
+   iteration-count | direction | fill-mode | play-state | name
+
+EG: animation: 3s ease-in 1s 2 reverse both paused slidein; */
+
+/* WRAP */
+
+/* ELLIP */
+
+/* TRANSITIONS */
+
+/* BREAK POINTS */
+
+/* -- min-width by default
+   -- if 2nd parameter is 'max-width', max-width used instead
+   -- if $until is added, $point becomes min-width and $until is max-width */
+
+/* LIST MARGINS */
+
+/* CALC */
+
+/* FLEXBOX */
+
+/* ------------------------------------------------------
+ * FLEXBOX MIXIN
+ * ------------------------------------------------------
+ * @desc  Let's you create flexbox container and item css with 2 mixins
+
+ * @usage
+ *
+ *    @include flexbox-container(
+ *
+ *        $display : flex,        [flex / inline]
+ *        $direction : row,       [row / row-reverse / column / column-reverse]
+ *        $wrap : nowrap,         [nowrap / wrap / wrap-reverse]
+ *        $justify : start,       [start / end / center / between / around]
+ *        $alignContent : start,  [start / end / center / between / around / stretch]
+ *        $alignItems : center     [start / end / center / baseline / stretch]
+ *
+ *    );
+ *
+ *
+ *    @include flexbox-item(
+ *
+ *        $order : null,          [integer] -- custom order of items
+ *        $grow : 0,              [0 / 1]
+ *        $shrink : 1,            [0 / 1]
+ *        $basis : auto,          [auto / <length>]
+ *        $alignSelf : auto       [auto / start / end / center / baseline / stretch]
+ *
+ *    );
+ *
+ * @author maxoys45
+ * @version 0.1
+ * ------------------------------------------------------ */
+
+/* ASPECT RATIO */
+
+/* HARDWARE ACCEL */
+
+/* CENTRED CONTENT */
+
+/* TARGET IE10+ */
+
+/* BG IMAGE SVG WITH PNG FALLBACK */
+
+/* ANIMATED PNG */
+
+/* Mixin to replicate an animated GIF using Keyframes and a PNG Sprite image.
+
+	$numberOfSteps 	= the number of frames to step between (no limit to number of steps)
+	$animName 		= purely used as the animation name to avoid duplicate animations
+	$imageSize 		= the width or height of the PNG image which needs to be shown in each frame
+	$duration 		= the total time for the animation in seconds
+	$playCount		= the way the animation is played (linear, infinite, inout)
+
+	** requires auto-prefixer to support all modern browsers
+	** Requires 'compass/css3' */
+
+/* example use */
+
+.animatedImage {
+  -webkit-animation: YES_WE_CAN 1s 2 forwards;
+          animation: YES_WE_CAN 1s 2 forwards;
+  /* places the keyframes animation outside of the selector */
+  background-image: url("http://www.maxhenchman.co.uk/random/123test.png");
+  background-repeat: no-repeat;
+  background-color: #FF0000;
+  display: block;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+@-webkit-keyframes YES_WE_CAN {
+  0% {
+    background-position: 0 0;
+  }
+
+  20% {
+    background-position: -0px 0;
+  }
+
+  20.0001% {
+    background-position: -100px 0;
+  }
+
+  40% {
+    background-position: -100px 0;
+  }
+
+  40.0001% {
+    background-position: -200px 0;
+  }
+
+  60% {
+    background-position: -200px 0;
+  }
+
+  60.0001% {
+    background-position: -300px 0;
+  }
+
+  80% {
+    background-position: -300px 0;
+  }
+
+  80.0001% {
+    background-position: -400px 0;
+  }
+
+  100% {
+    background-position: -400px 0;
+  }
+}
+
+@keyframes YES_WE_CAN {
+  0% {
+    background-position: 0 0;
+  }
+
+  20% {
+    background-position: -0px 0;
+  }
+
+  20.0001% {
+    background-position: -100px 0;
+  }
+
+  40% {
+    background-position: -100px 0;
+  }
+
+  40.0001% {
+    background-position: -200px 0;
+  }
+
+  60% {
+    background-position: -200px 0;
+  }
+
+  60.0001% {
+    background-position: -300px 0;
+  }
+
+  80% {
+    background-position: -300px 0;
+  }
+
+  80.0001% {
+    background-position: -400px 0;
+  }
+
+  100% {
+    background-position: -400px 0;
+  }
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+
+html {
+  line-height: 1;
+  font-size: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+input,
+button,
+select,
+textarea,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.stripInput,
+.btn--default {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.3;
+  color: #0f2b43;
+}
+
+h1 {
+  font-size: 4.8em;
+  margin-bottom: .8em;
+}
+
+h2 {
+  font-size: 4em;
+  margin-bottom: .2em;
+}
+
+h3 {
+  font-size: 2.1em;
+  margin-bottom: .5em;
+}
+
+h4 {
+  font-size: 1.4em;
+  margin-bottom: .5em;
+}
+
+a,
+button,
+input,
+textarea {
+  outline: none;
+}
+
+p {
+  line-height: 1.3;
+  font-size: 1.4rem;
+  margin-bottom: 1em;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+p a {
+  font-weight: 400;
+}
+
+@media screen and (min-width: 480px) {
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+.anchor,
+p a,
+.btn__logout {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  color: #4a90e4;
+  outline: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+
+.input--default {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: default;
+  border: 1px solid #d5d4d4;
+  background: #FFFFFF;
+  padding: 1.5rem 1rem;
+  font-size: 1.6rem;
+  outline: none;
+  color: #222222;
+  text-align: left;
+  position: relative;
+  min-width: 150px;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.input--default:hover {
+  color: inherit;
+}
+
+.btn--default {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  background-color: #1fba97;
+  border-bottom: 2px solid #188e74;
+  padding: 1.2rem 1.4rem;
+}
+
+.btn--default:after {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.3rem;
+  margin-left: .7rem;
+}
+
+.btn--default:hover,
+.btn--default:focus,
+.btn--default:active {
+  border-color: #106350;
+}
+
+.hiddenInputs {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.wrapped {
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+iframe {
+  width: 100%;
+}
+
+/* MAIN STYLES */
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  color: #475e86;
+  background: #f4f6f7;
+}
+
+.allContent {
+  height: 100%;
+  padding: 3rem;
+  max-width: 960px;
+}
+
+.allContent .inside {
+  position: relative;
+}
+
+.btn__logout {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.form__group {
+  margin-bottom: 2rem;
+}
+
+.form__group:last-of-type {
+  margin-bottom: 0;
+}
+
