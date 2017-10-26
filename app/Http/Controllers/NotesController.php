@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Note;
+use Auth;
 
 class NotesController extends Controller
 {
@@ -18,6 +19,7 @@ class NotesController extends Controller
 		$note = new Note;
 		$note->title = $request->input('title');
 		$note->note = $request->input('note');
+		$note->name = Auth::user()->name;
 
 		// Save note
 
@@ -34,6 +36,14 @@ class NotesController extends Controller
 		$notes = Note::all();
 
 		return view('home')->with('notes', $notes);
+
+	}
+
+	public function showNote() {
+
+		// echo Note::all();
+
+		return view('note');
 
 	}
 }

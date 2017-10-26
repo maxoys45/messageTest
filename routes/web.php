@@ -15,12 +15,7 @@ Route::group(['middleware' => ['web']], function () {
 
 	Auth::routes();
 
-	Route::get('/', function () {
-		if (Auth::check()) {
-			return redirect('home');
-		}
-	    return view('auth.login');
-	});
+	Route::get('/', 'PagesController@getHome');
 
 });
 
@@ -30,6 +25,12 @@ Route::group(['middleware' => ['auth']], function () {
 
 	Route::post('/create/submit', 'NotesController@submit');
 
+	Route::get('/note', 'NotesController@showNote');
+	
+	// Route::get('/note/{id}', 'NotesController@showNote');
+
+	Route::get('/home', 'NotesController@getNotes')->name('home');
+
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
+

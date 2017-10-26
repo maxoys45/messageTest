@@ -16,17 +16,15 @@
                 <th class="notes__heading">Date</th>
             </tr>
 
-<?php /*
             @if(count($notes) > 0)
                 @foreach($notes as $note)
                     <tr>
-                        <td class="notes__cell">{{$note->title}}</td>
-                        <td class="notes__cell">{{$note->title}}</td>
-                        <td class="notes__cell">{{$note->title}}</td>
+                        <td class="notes__cell">{{$note->name}}</td>
+                        <td class="notes__cell"><a href="/note">{{$note->title}}</a></td>
+                        <td class="notes__cell">{{ date('d/m/y \a\t H:i', strtotime($note->created_at)) }}</td>
                     </tr>
                 @endforeach
             @endif
-*/ ?>
 
         </table>
 
