@@ -785,6 +785,19 @@ body {
   -webkit-align-self: flex-auto;
   -ms-flex-item-align: auto;
   align-self: flex-auto;
+  position: relative;
+}
+
+.note__content:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 10px solid #FFFFFF;
+  border-bottom: 8px solid transparent;
+  position: absolute;
+  right: 100%;
+  top: 1rem;
 }
 
 .note__data {
