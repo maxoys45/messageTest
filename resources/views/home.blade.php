@@ -18,7 +18,7 @@
 
             @if(count($notes) > 0)
                 @foreach($notes as $note)
-                    <a class="row note__link" href="/note/{{ $note->id }}">
+                    <a class="row note__link" href="{{ url('note/' . $note->id) }}">
                         <div class="col notes__cell">{{$note->name}}</div>
                         <div class="col notes__cell">{{$note->title}}</div>
                         <div class="col notes__cell">{{ date('d/m/y \a\t H:i', strtotime($note->created_at)) }}</div>
@@ -28,7 +28,7 @@
 
         </div>
 
-        <a href="/create-a-new-note" class="btn--default">Create a new note</a>
+        <a href="{{ url('create-a-new-note') }}" class="btn--default">Create a new note</a>
 
     </div>
 

@@ -25,7 +25,7 @@
 
 		<div class="form__group btn__group">
 
-			<a href="/home" class="form__cancel float--left">Cancel</a>
+			<a href="{{ route('home') }}" class="form__cancel float--left">Cancel</a>
 
 			<input class="form__submit float--right" type="submit" value="Add note">
 

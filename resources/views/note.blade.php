@@ -24,6 +24,6 @@
 
     </div>
 
-    <a href="/home" class="form__cancel float-left">Back to overview</a>
+    <a href="{{ route('home') }}" class="form__cancel float-left">Back to overview</a>
 
 @endsection
