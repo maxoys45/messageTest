@@ -82,6 +82,12 @@ body {
 	
 }
 
+.help-block {
+	@extend .alert;
+	@extend .alert.error;
+	margin-top:1rem;
+}
+
 // LOGIN 
 
 .login__container {
